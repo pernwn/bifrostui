@@ -1,16 +1,18 @@
+
+import React from "react";
+import { PrimaryBtn, UrlBtn } from "./interface/buttons";
+import ThemeToggle from "./interaction/themeToggle";
 import './App.css'
 import './styles/button.css'
-import Preview from './Preview'
-import ThemeToggle from './interaction/themeToggle'
 
 function App() {
- 
-
   return (
-    <>
-      <Preview />
-    </>
-  )
+    <div className="previewContainer">
+      <PrimaryBtn text="Primary Button" />
+      <UrlBtn text="Url Button" />
+      <ThemeToggle />
+    </div>
+  );
 }
 
 export default App
