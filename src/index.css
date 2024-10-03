@@ -11,6 +11,299 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /*Default Colors*/
+  /*COLOR PRIMITIVES*/
+/*Grøn*/
+--bifrost-green-100: #EAF0ED;
+--bifrost-green-200: #a8ccb8;
+--bifrost-green-300: #6faf90;
+--bifrost-green-400: #419774;
+--bifrost-green-500: #1d8663;
+--bifrost-green-600: #007a5b; /*Grøn brandfarve*/
+--bifrost-green-700: #006c4f;
+--bifrost-green-800: #106346;
+--bifrost-green-900: #00573f;
+--bifrost-green-1000: #00422f;
+/*Orange*/
+--bifrost-orange-100: #F8EFED;
+--bifrost-orange-200: #FFDDD1;
+--bifrost-orange-300: #ffc8b7;
+--bifrost-orange-400: #fb9679;
+--bifrost-orange-500: #ec7b5b;
+--bifrost-orange-600: #e26847; /*Orange brandfarve*/
+--bifrost-orange-700: #c14c2e;
+--bifrost-orange-800: #a63a20;
+--bifrost-orange-900: #882c16;
+--bifrost-orange-1000: #682110;
+/*Neutral*/
+--bifrost-neutral-100: #F2F4F6;
+--bifrost-neutral-200: #D7DDE4;
+--bifrost-neutral-300: #BEC8D2;
+--bifrost-neutral-400: #A5B2C0;
+--bifrost-neutral-500: #778899;
+--bifrost-neutral-600: #637484;
+--bifrost-neutral-700: #50606F;
+--bifrost-neutral-800: #3F4D5A;
+--bifrost-neutral-900: #303A44;
+--bifrost-neutral-1000: #272F37;
+/* Denne bliver nødt til at være rgb pga opacity */
+--bifrost-light-100: rgba(254, 253, 251, 0.05);
+--bifrost-light-200: rgba(254, 253, 251, 0.1);
+--bifrost-light-300: rgba(254, 253, 251, 0.2);
+--bifrost-light-400: rgba(254, 253, 251, 0.4);
+--bifrost-light-500: rgba(254, 253, 251, 0.7);
+--bifrost-light-600: rgba(254, 253, 251, 0.8);
+--bifrost-light-700: rgba(254, 253, 251, 0.85);
+--bifrost-light-800: rgba(254, 253, 251, 0.9);
+--bifrost-light-900: rgba(254, 253, 251, 0.95);
+--bifrost-light-1000: rgba(254, 253, 251, 1); /*farve ovenpå primær bg farve -- grey100*/
+/* rgb pga opacity*/
+--bifrost-dark-100: rgba(27, 23, 11, 0 .05);
+--bifrost-dark-200: rgba(27, 23, 11, 0 .1);
+--bifrost-dark-300: rgba(27, 23, 11, 0 .2);
+--bifrost-dark-400: rgba(27, 23, 11, 0 .4);
+--bifrost-dark-500: rgba(27, 23, 11, 0 .7);
+--bifrost-dark-600: rgba(27, 23, 11, 0 .8);
+--bifrost-dark-700: rgba(27, 23, 11, 0 .85);
+--bifrost-dark-800: rgba(27, 23, 11, 0 .9);
+--bifrost-dark-900: rgba(27, 23, 11, 0 .95);
+--bifrost-dark-1000: rgba(27, 23, 11, 1); /*denne bruges til det meste tekst*/
+/*Danger*/
+--bifrost-danger-100: #fee9e7;
+--bifrost-danger-200: #fdd3d0;
+--bifrost-danger-300: #fcb3ad;
+--bifrost-danger-400: #f4776a;
+--bifrost-danger-500: #ec221f;
+--bifrost-danger-600: #c00f0c;
+--bifrost-danger-700: #900b09;
+--bifrost-danger-800: #690807;
+--bifrost-danger-900: #4d0b0a;
+--bifrost-danger-1000: #300603;
+/*Warning*/
+--bifrost-warning-100: #FAEFD1;
+--bifrost-warning-200: #F8E9BF;
+--bifrost-warning-300: #F6E3AE;
+--bifrost-warning-400: #F4DD9C;
+--bifrost-warning-500: #F2D78A;
+--bifrost-warning-600: #E8B931;
+--bifrost-warning-700: #E5A000;
+--bifrost-warning-800: #BF6A02;
+--bifrost-warning-900: #975102;
+--bifrost-warning-1000: #682D03;
+/*Success*/
+--bifrost-success-100: #ebffee;
+--bifrost-success-200: #cff7d3;
+--bifrost-success-300: #aff4c6;
+--bifrost-success-400: #85e0a3;
+--bifrost-success-500: #14ae5c;
+--bifrost-success-600: #009951;
+--bifrost-success-700: #008043;
+--bifrost-success-800: #02542d;
+--bifrost-success-900: #024023;
+--bifrost-success-1000: #062d1b;
+/**/
+--bifrost-grey-100: #f4f3f3;
+--bifrost-grey-200: #dddddb;
+--bifrost-grey-300: #c7c6c3;
+--bifrost-grey-400: #b2b0ad;
+--bifrost-grey-500: #9d9b97;
+--bifrost-grey-600: #757575;
+--bifrost-grey-700: #444444;
+--bifrost-grey-800: #383838;
+--bifrost-grey-900: #2c2c2c;
+--bifrost-grey-1000: #1e1e1e;
+/*-----UTILITIES----------------------------------------------------------*/
+/*Box shadow style*/
+--bifrost-box-shadow: 0 1px 4px 0 rgba(27, 23, 11, 0.10), 0 1px 4px 0 rgba(27, 23, 11, 0.05);
+}
+
+:root[light]{
+  /*-----LIGHT MODE COLORS----------------------------------------------------------*/
+/*Default BG*/
+--bifrost-default-default: var(--bifrost-light-1000);
+--bifrost-default-secondary: var(--bifrost-grey-100);
+--bifrost-default-tertiary: var(--bifrost-grey-300);
+/*TextColors Default*/
+--bifrost-default-text: var(--bifrost-dark-1000);
+--bifrost-secondary-text: var(--bifrost-dark-500);
+--bifrost-tertiary-text: var(--bifrost-dark-400);
+/*Default BG Hover*/
+--bifrost-default-defHover: var(--bifrost-grey-100);
+--bifrost-default-secHover: var(--bifrost-grey-200);
+--bifrost-default-terHover: var(--bifrost-grey-400);
+/*---------------------------------------------------------------*/
+/*Neutral BG*/
+--bifrost-neutral-default: var(--bifrost-neutral-700);
+--bifrost-neutral-secondary: var(--bifrost-neutral-300);
+--bifrost-neutral-tertiary: var(--bifrost-neutral-200);
+/*TextColors*/
+--bifrost-onNeutral-default: var(--bifrost-neutral-100);
+--bifrost-onNeutral-secondary: var(--bifrost-neutral-900);
+--bifrost-onNeutral-tertiary: var(--bifrost-neutral-800);
+/*Neutral BG Hover*/
+--bifrost-neutral-defHover: var(--bifrost-neutral-800);
+--bifrost-neutral-secHover: var(--bifrost-neutral-400);
+--bifrost-neutral-terHover: var(--bifrost-neutral-300);
+/*-----BRAND COLORS----------------------------------------------------------*/
+/*Plantas Green BG*/
+--bifrost-green-default: var(--bifrost-green-600);
+--bifrost-green-secondary: var(--bifrost-green-200);
+--bifrost-green-tertiary: var(--bifrost-green-100);
+/*TextColors onGreen*/
+--bifrost-onGreen-default: var(--bifrost-green-100);
+--bifrost-onGreen-secondary: var(--bifrost-green-900);
+--bifrost-onGreen-tertiary: var(--bifrost-green-800);
+/*Plantas Green BG Hover*/
+--bifrost-green-defHover: var(--bifrost-green-700);
+--bifrost-green-secHover: var(--bifrost-green-300);
+--bifrost-green-terHover: var(--bifrost-green-200);
+/*---------------------------------------------------------------*/
+/*Plantas Orange BG*/
+--bifrost-orange-default: var(--bifrost-orange-600);
+--bifrost-orange-secondary: var(--bifrost-orange-200);
+--bifrost-orange-tertiary: var(--bifrost-orange-100);
+/*TextColors onOrange*/
+--bifrost-onOrange-default: var(--bifrost-orange-100);
+--bifrost-onOrange-secondary: var(--bifrost-orange-900);
+--bifrost-onOrange-tertiary: var(--bifrost-orange-800);
+/*Plantas Orange BG Hover*/
+--bifrost-orange-defHover: var(--bifrost-orange-500);
+--bifrost-orange-secHover: var(--bifrost-orange-300);
+--bifrost-orange-terHover: var(--bifrost-orange-200);
+/*-----STATE COLORS----------------------------------------------------------*/
+/*Success BG*/
+--bifrost-success-default: var(--bifrost-success-500);
+--bifrost-success-secondary: var(--bifrost-success-200);
+--bifrost-success-tertiary: var(--bifrost-success-100);
+/*TextColors onSuccess*/
+--bifrost-onSuccess-default: var(--bifrost-success-100);
+--bifrost-onSuccess-secondary: var(--bifrost-success-900);
+--bifrost-onSuccess-tertiary: var(--bifrost-success-800);
+/*Success BG Hover*/
+--bifrost-success-defHover: var(--bifrost-success-600);
+--bifrost-success-secHover: var(--bifrost-success-300);
+--bifrost-success-terHover: var(--bifrost-success-200);
+/*---------------------------------------------------------------*/
+/*Warning BG*/
+--bifrost-warning-default: var(--bifrost-warning-500);
+--bifrost-warning-secondary: var(--bifrost-warning-400);
+--bifrost-warning-tertiary: var(--bifrost-warning-600);
+/*TextColors onWarning*/
+--bifrost-onWarning-default: var(--bifrost-warning-1000);
+--bifrost-onWarning-secondary: var(--bifrost-warning-1000);
+--bifrost-onWarning-tertiary: var(--bifrost-warning-900);
+/*Warning BF Hover*/
+--bifrost-warning-defHover: var(--bifrost-warning-400);
+--bifrost-warning-secHover: var(--bifrost-warning-500);
+--bifrost-warning-terHover: var(--bifrost-warning-600);
+/*---------------------------------------------------------------*/
+/*Danger BG*/
+--bifrost-danger-default: var(--bifrost-danger-500);
+--bifrost-danger-secondary: var(--bifrost-danger-300);
+--bifrost-danger-tertiary: var(--bifrost-danger-200);
+/*TextColors onDanger*/
+--bifrost-onDanger-default: var(--bifrost-danger-100);
+--bifrost-onDanger-secondary: var(--bifrost-danger-900);
+--bifrost-onDanger-tertiary: var(--bifrost-danger-800);
+/*Danger BG Hover*/
+--bifrost-danger-defHover: var(--bifrost-danger-400);
+--bifrost-danger-secHover: var(--bifrost-danger-200);
+--bifrost-danger-terHover: var(--bifrost-danger-100);
+}
+
+:root[dark]{
+  /*-----DARK MODE COLORS----------------------------------------------------------*/
+/*Default BG*/
+--bifrost-default-default: var(--bifrost-grey-900);
+--bifrost-default-secondary: var(--bifrost-grey-800);
+--bifrost-default-tertiary: var(--bifrost-grey-600);
+/*TextColors Default*/
+--bifrost-default-text: var(--bifrost-light-1000);
+--bifrost-secondary-text: var(--bifrost-light-500);
+--bifrost-tertiary-text: var(--bifrost-light-400);
+/*Default BG Hover*/
+--bifrost-default-defHover: var(--bifrost-grey-800);
+--bifrost-default-secHover: var(--bifrost-grey-900);
+--bifrost-default-terHover: var(--bifrost-grey-700);
+/*---------------------------------------------------------------*/
+/*Neutral BG*/
+--bifrost-neutral-default: var(--bifrost-neutral-400);
+--bifrost-neutral-secondary: var(--bifrost-neutral-600);
+--bifrost-neutral-tertiary: var(--bifrost-neutral-700);
+/*TextColors*/
+--bifrost-onNeutral-default: var(--bifrost-neutral-1000);
+--bifrost-onNeutral-secondary: var(--bifrost-neutral-200);
+--bifrost-onNeutral-tertiary: var(--bifrost-neutral-100);
+/*Neutral BG Hover*/
+--bifrost-neutral-defHover: var(--bifrost-neutral-500);
+--bifrost-neutral-secHover: var(--bifrost-neutral-800);
+--bifrost-neutral-terHover: var(--bifrost-neutral-1000);
+/*-----BRAND COLORS----------------------------------------------------------*/
+/*Plantas Green BG*/
+--bifrost-green-default: var(--bifrost-green-300);
+--bifrost-green-secondary: var(--bifrost-green-600);
+--bifrost-green-tertiary: var(--bifrost-green-700);
+/*TextColors onGreen*/
+--bifrost-onGreen-default: var(--bifrost-green-900);
+--bifrost-onGreen-secondary: var(--bifrost-green-100);
+--bifrost-onGreen-tertiary: var(--bifrost-green-100);
+/*Plantas Green BG Hover*/
+--bifrost-green-defHover: var(--bifrost-green-200);
+--bifrost-green-secHover: var(--bifrost-green-500);
+--bifrost-green-terHover: var(--bifrost-green-800);
+/*---------------------------------------------------------------*/
+/*Plantas Orange BG*/
+--bifrost-orange-default: var(--bifrost-orange-500);
+--bifrost-orange-secondary: var(--bifrost-orange-600);
+--bifrost-orange-tertiary: var(--bifrost-orange-700);
+/*TextColors onOrange*/
+--bifrost-onOrange-default: var(--bifrost-orange-900);
+--bifrost-onOrange-secondary: var(--bifrost-orange-100);
+--bifrost-onOrange-tertiary: var(--bifrost-orange-100);
+/*Plantas Orange BG Hover*/
+--bifrost-orange-defHover: var(--bifrost-orange-400);
+--bifrost-orange-secHover: var(--bifrost-orange-400);
+--bifrost-orange-terHover: var(--bifrost-orange-600);
+/*-----StATE COLORS----------------------------------------------------------*/
+/*Success BG*/
+--bifrost-success-default: var(--bifrost-success-600);
+--bifrost-success-secondary: var(--bifrost-success-700);
+--bifrost-success-tertiary: var(--bifrost-success-900);
+/*TextColors onSuccess*/
+--bifrost-onSuccess-default: var(--bifrost-success-100);
+--bifrost-onSuccess-secondary: var(--bifrost-success-100);
+--bifrost-onSuccess-tertiary: var(--bifrost-success-100);
+/*Success BG Hover*/
+--bifrost-success-defHover: var(--bifrost-success-700);
+--bifrost-success-secHover: var(--bifrost-success-800);
+--bifrost-success-terHover: var(--bifrost-success-1000);
+/*---------------------------------------------------------------*/
+/*Warning BG*/
+--bifrost-warning-default: var(--bifrost-warning-400);
+--bifrost-warning-secondary: var(--bifrost-warning-800);
+--bifrost-warning-tertiary: var(--bifrost-warning-900);
+/*TextColors onWarning*/
+--bifrost-onWarning-default: var(--bifrost-warning-900);
+--bifrost-onWarning-secondary: var(--bifrost-warning-200);
+--bifrost-onWarning-tertiary: var(--bifrost-warning-100);
+/*Warning BF Hover*/
+--bifrost-warning-defHover: var(--bifrost-warning-500);
+--bifrost-warning-secHover: var(--bifrost-warning-700);
+--bifrost-warning-terHover: var(--bifrost-warning-800);
+/*---------------------------------------------------------------*/
+/*Danger BG*/
+--bifrost-danger-default: var(--bifrost-danger-600);
+--bifrost-danger-secondary: var(--bifrost-danger-800);
+--bifrost-danger-tertiary: var(--bifrost-danger-900);
+/*TextColors onDanger*/
+--bifrost-onDanger-default: var(--bifrost-danger-100);
+--bifrost-onDanger-secondary: var(--bifrost-danger-100);
+--bifrost-onDanger-tertiary: var(--bifrost-danger-100);
+/*Danger BG Hover*/
+--bifrost-danger-defHover: var(--bifrost-danger-700);
+--bifrost-danger-secHover: var(--bifrost-danger-900);
+--bifrost-danger-terHover: var(--bifrost-danger-1000);
 }
 
 
