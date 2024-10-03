@@ -1,11 +1,13 @@
 import React from 'react';
-import { PrimaryBtn, UrlBtn } from './interface/buttons';
+import { PrimaryBtn, ToggleBtn, UrlBtn } from './interface/buttons';
+import ThemeToggle from './interaction/themeToggle';
 
 const Preview = () => {
   return (
-    <div>
-      <PrimaryBtn name="Primary Button"/>
-      <UrlBtn name="Url Button"/>
+    <div className="previewContainer">
+      <PrimaryBtn text="Primary Button" />
+      <UrlBtn text="Url Button" />
+      <ThemeToggle/>
     </div>
   );
 }

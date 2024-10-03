@@ -1,16 +1,17 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
+
+  /* color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+color-scheme: light dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
 
   /*Default Colors*/
   /*COLOR PRIMITIVES*/
@@ -34,8 +35,8 @@
 --bifrost-orange-600: #e26847; /*Orange brandfarve*/
 --bifrost-orange-700: #c14c2e;
 --bifrost-orange-800: #a63a20;
---bifrost-orange-900: #882c16;
---bifrost-orange-1000: #682110;
+--bifrost-orange-900: #87260d;
+--bifrost-orange-1000: #631406;
 /*Neutral*/
 --bifrost-neutral-100: #F2F4F6;
 --bifrost-neutral-200: #D7DDE4;
@@ -116,6 +117,7 @@
 /*-----UTILITIES----------------------------------------------------------*/
 /*Box shadow style*/
 --bifrost-box-shadow: 0 1px 4px 0 rgba(27, 23, 11, 0.10), 0 1px 4px 0 rgba(27, 23, 11, 0.05);
+--bifrost-transition: ease .5s all;
 }
 
 :root[light]{
@@ -168,7 +170,7 @@
 --bifrost-onOrange-secondary: var(--bifrost-orange-900);
 --bifrost-onOrange-tertiary: var(--bifrost-orange-800);
 /*Plantas Orange BG Hover*/
---bifrost-orange-defHover: var(--bifrost-orange-500);
+--bifrost-orange-defHover: var(--bifrost-orange-700);
 --bifrost-orange-secHover: var(--bifrost-orange-300);
 --bifrost-orange-terHover: var(--bifrost-orange-200);
 /*-----STATE COLORS----------------------------------------------------------*/
@@ -258,11 +260,11 @@
 --bifrost-orange-secondary: var(--bifrost-orange-600);
 --bifrost-orange-tertiary: var(--bifrost-orange-700);
 /*TextColors onOrange*/
---bifrost-onOrange-default: var(--bifrost-orange-900);
+--bifrost-onOrange-default: var(--bifrost-orange-1000);
 --bifrost-onOrange-secondary: var(--bifrost-orange-100);
 --bifrost-onOrange-tertiary: var(--bifrost-orange-100);
 /*Plantas Orange BG Hover*/
---bifrost-orange-defHover: var(--bifrost-orange-400);
+--bifrost-orange-defHover: var(--bifrost-orange-600);
 --bifrost-orange-secHover: var(--bifrost-orange-400);
 --bifrost-orange-terHover: var(--bifrost-orange-600);
 /*-----StATE COLORS----------------------------------------------------------*/

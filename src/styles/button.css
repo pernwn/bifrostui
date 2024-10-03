@@ -1,0 +1,35 @@
+.btn {
+  padding: 8px 12px;
+  width: full;
+  height: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 4px;
+  border: none;
+  font-size: 0.8rem;
+
+  transition: var(--bifrost-transition);
+}
+
+.btn-primary {
+  background-color: var(--bifrost-orange-default);
+  color: var(--bifrost-onOrange-default);
+}
+
+.btn-primary:hover {
+  background-color: var(--bifrost-orange-defHover);
+  color: var(-bifrost-orange-secHover);
+}
+
+.btn-url {
+  border: none;
+  background-color: transparent;
+  color: var(--bifrost-default-text);
+}
+
+.btn-url:hover {
+  color: var(--bifrost-orange-default);
+}

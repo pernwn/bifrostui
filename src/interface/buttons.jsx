@@ -1,20 +1,31 @@
 export const PrimaryBtn = (props) => {
-  const { name, className = "btn", style } = props;
+  const { text, className = "btn", style, icon} = props;
   const primaryClass = `btn-primary ${className}`.trim();
 
   return (
     <button className={primaryClass} style={style}>
-      {name}
+      {text}
     </button>
   );
 };
 
 export const UrlBtn = (props) => {
-  const { name, url, className = "btn", style } = props;
+  const { text, url, className = "btn", style } = props;
   const urlClass = `btn-url ${className}`.trim();
   return (
     <a href={url}>
-      <button className={urlClass} style={style}>{name}</button>
+      <button className={urlClass} style={style}>{text}</button>
     </a>
   );
 };
+
+export const ToggleBtn = (props) => {
+  const { text, className = "btn", style, click} = props;
+  const toggleClass = `btn-toggle ${className}`.trim();
+
+  return (
+    <button className={toggleClass} style={style} onClick={click}>
+      {text}
+    </button>
+  )
+}
