@@ -1,6 +1,5 @@
 // index.js
 import React from "react";
-import ReactDOM from "react-dom";
 import { PrimaryBtn, UrlBtn, ToggleBtn } from "./interface/buttons.jsx";
 import { createRoot } from "react-dom/client";
 
@@ -29,7 +28,7 @@ components.forEach(({ name, component }) => {
         this.dispatchEvent(new CustomEvent("click", { detail: "clicked" }));
 
       // Dynamisk oprettelse af React-komponent
-      root.render(
+      this.root.render(
         React.createElement(component, {
           text,
           url,
