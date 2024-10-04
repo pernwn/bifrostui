@@ -1,7 +1,8 @@
 const path = require("path");
 
 module.exports = {
-  entry: { buttons: "./src/buttons.js", },
+  devtool: "source-map",
+  entry: { buttons: "./src/buttons.js" },
   output: {
     filename: "bifrost[name].bundle.js",
     path: path.resolve(__dirname, "dist"), // Hvor filen skal gemmes

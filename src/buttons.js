@@ -1,6 +1,6 @@
 // index.js
 import React from "react";
-import { bifrostPrimary, bifrostUrl, bifrostToggle } from "./interface/buttons.jsx";
+import { bifrostPrimary, bifrostUrl, bifrostToggle } from "./interface/buttons.jsx";3
 import { createRoot } from "react-dom/client";
 
 const components = [
@@ -8,7 +8,6 @@ const components = [
   { name: "url-btn", component: bifrostUrl },
   { name: "toggle-btn", component: bifrostToggle },
 ];
-
 
 components.forEach(({ name, component }) => {
   class WebComponent extends HTMLElement {
