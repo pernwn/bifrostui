@@ -4,8 +4,6 @@ import ReactDOM from "react-dom";
 import { PrimaryBtn, UrlBtn, ToggleBtn } from "./interface/buttons.jsx";
 import { createRoot } from "react-dom/client";
 
-
-const root = createRoot(components);
 const components = [
   { name: "PrimaryBtn", component: PrimaryBtn },
   { name: "UrlBtn", component: UrlBtn },
@@ -13,12 +11,12 @@ const components = [
 ];
 
 
-
 components.forEach(({ name, component }) => {
   class WebComponent extends HTMLElement {
     constructor() {
       super();
-      this.attachShadow({ mode: "open" });
+      this.attachShadow({ mode: "open" })
+      this.root = createRoot(this.shadowRoot);
     }
 
     connectedCallback() {
