@@ -1,4 +1,4 @@
-export const PrimaryBtn = (props) => {
+export const bifrostPrimary = (props) => {
   const { text, className = "btn", style, icon} = props;
   const primaryClass = `btn-primary ${className}`.trim();
 
@@ -9,7 +9,7 @@ export const PrimaryBtn = (props) => {
   );
 };
 
-export const UrlBtn = (props) => {
+export const bifrostUrl = (props) => {
   const { text, url, className = "btn", style } = props;
   const urlClass = `btn-url ${className}`.trim();
   return (
@@ -19,7 +19,7 @@ export const UrlBtn = (props) => {
   );
 };
 
-export const ToggleBtn = (props) => {
+export const bifrostToggle = (props) => {
   const { text, className = "btn", style, click} = props;
   const toggleClass = `btn-toggle ${className}`.trim();
 

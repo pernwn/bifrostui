@@ -1,15 +1,17 @@
 
 import React from "react";
-import { PrimaryBtn, UrlBtn } from "./interface/buttons";
+
 import ThemeToggle from "./interaction/themeToggle";
 import './App.css'
 import './styles/button.css'
+import { bifrostPrimary } from './interface/buttons';
 
 function App() {
   return (
     <div className="previewContainer">
-      <PrimaryBtn text="Primary Button" />
-      <UrlBtn text="Url Button" />
+      <bifrostPrimary text="Primary Button"/>
+      <bifrostUrl text="Url Button" />
+      
       <ThemeToggle />
     </div>
   );

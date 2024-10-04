@@ -1,12 +1,12 @@
 // index.js
 import React from "react";
-import { PrimaryBtn, UrlBtn, ToggleBtn } from "./interface/buttons.jsx";
+import { bifrostPrimary, bifrostUrl, bifrostToggle } from "./interface/buttons.jsx";
 import { createRoot } from "react-dom/client";
 
 const components = [
-  { name: "PrimaryBtn", component: PrimaryBtn },
-  { name: "UrlBtn", component: UrlBtn },
-  { name: "ToggleBtn", component: ToggleBtn },
+  { name: "primary-btn", component: bifrostPrimary },
+  { name: "url-btn", component: bifrostUrl },
+  { name: "toggle-btn", component: bifrostToggle },
 ];
 
 

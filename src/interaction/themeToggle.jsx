@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { ToggleBtn } from "../interface/buttons";
+import { bifrostToggle } from "../interface/buttons";
+
 
 function ThemeToggle() {
   // Initialize the state with a fallback to 'light' or based on localStorage
@@ -37,7 +39,7 @@ function ThemeToggle() {
   };
 
   return (
-    <ToggleBtn
+    <bifrostToggle
       click={toggleTheme}
       text={theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
     />
